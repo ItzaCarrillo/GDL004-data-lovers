@@ -1,3 +1,4 @@
+console.log("correcto");
 export default [
   {
     name: 'Harry Potter',

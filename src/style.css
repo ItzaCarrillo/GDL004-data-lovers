@@ -1,0 +1,42 @@
+#Start {
+  background-image:;
+}
+#sortingHat {
+  display: none;
+  background-color:;
+
+}
+#Gryffindor {
+  display: none;
+  background-color: black:
+}
+#Slytherin {
+  display: none;
+  background-color: black:
+}
+#Hufflepuff {
+  display: none;
+  background-color: black:
+}
+#Ravenclaw {
+  display: none;
+  background-color: black:
+}
+#Characters {
+  display: none;
+  background-color: black:
+}
+
+h1 {
+  font-family: 'Quattrocento', serif;
+  color:aliceblue;
+}
+
+p {
+  font-family: 'Fanwood Text', serif;
+  color: aliceblue;
+}
+
+body{
+  background-color: black:
+}
