@@ -1,6 +1,8 @@
- import POTTER from './data/potter/potter.js'
-//import POTTER from './data/potter/potter.json'
+/* import POTTER from './data/potter/potter.js'
+ //import{houses} from './data.js
+/*import POTTER from './data/potter/potter.json'*/
 //console.log(POTTER)
+import datajs from './data.js';
 
 window.NoneBlock = function NoneBlock(fromId) {
   let idArray = ["Start", "Characters", "sortingHat", "Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
@@ -25,3 +27,26 @@ let hufflepuffBtn = document.getElementById("hufflepuffBtn");
 hufflepuffBtn.addEventListener("click", function() {NoneBlock("Hufflepuff")});
 let ravenclawBtn = document.getElementById("ravenclawBtn");
 ravenclawBtn.addEventListener("click", function() {NoneBlock("Ravenclaw")});
+
+document.addEventListener("click", () => {
+  filterBy("house", "Gryffindor")
+  .then(patronus => {
+      console.log(patronus);
+    })
+    .catch(error => {
+        console.error("Error al filtrar patronus");
+        console.log(error);
+    });
+});
+
+/*document.addEventListener("click", async () => {
+  let subFiltered = await filterBy("House", "Gryffindor")
+  subFilterBy(subFiltered,"species", "human")
+  .then(patronus => {
+      console.log(patronus);
+    })
+    .catch(error => {
+        console.error("Error al filtrar patronus");
+        console.log(error);
+    });
+});*/

@@ -16,8 +16,7 @@
       <ul>
         <li><a href="#Start" onclick="NoneBlock('Start')">START</a></li>
         <li><a href="#Characters" onclick="NoneBlock('Characters')">CHARACTERS</a></li>
-        <li>
-          <a href="#SortingHat" onclick="NoneBlock('sortingHat')">SORTING HAT</a>
+        <li><a href="#SortingHat" onclick="NoneBlock('sortingHat')">SORTING HAT</a>
           <ul>
             <li><a href="#Gryffindor" onclick="NoneBlock('Gryffindor')">GRYFFINDOR</a></li>
             <li><a href="#Slytherin" onclick="NoneBlock('Slytherin')">SLYTHERIN</a></li>
@@ -38,34 +37,16 @@
     <!--BUSCADOR PERSONAJES-->
     <div id="Characters" class="personajes">
       <h1>CHARACTERS</h1>
-    <!--  <div class="filters">
-        <input type="text" id="" onkeyup="filterByHouse()" placeholder="Search for names.." title="Type in a name">
-        <p>Sort by</p>
-        <select name="Patronus">
-          <option value="1">stag</option>
-          <option value="2">otter</option>
-          <option value="3">Jack Russell terrier</option>
-          <option value="4">tabby cat</option>
-          <option value="5">swan</option>
-          <option value="6">doe</option>
-          <option value="7">hare</option>
-          <option value="8">horse</option>
-          <option value="9">wolf</option>
-          <option value="10">weasel</option>
-          <option value="11">lynx</option>
-          <option value="12">persian cat</option>
-          <option value="13">Unknown</option>
-        </select>
-        <select name="wand core">
-          <option value="1">phoenix feather</option>
-          <option value="2">dragon heartstring</option>
-          <option value="3">unicorn tail-hair</option>
-          <option value="4">Unknown</option>
-        </select>
-        <select name="Role">
-            <option value="1">Hogwarts Student</option>
-            <option value="2">Hogwarts Staff</option>
-      </div>-->
+        <form>
+          <input list="filterBy" name="filterBy">
+          <datalist id="filterBy">
+              <option value="">
+              <option value="">
+              <option value="Species">
+              <option value="Role">
+              <option value="Gender">
+        </datalist>
+        </form>
     </div>
 
     <!-- Pantalla Sorting Hat seleccionador de casas-->
