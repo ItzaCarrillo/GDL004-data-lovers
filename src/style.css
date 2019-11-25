@@ -1,0 +1,47 @@
+body{
+    background-color: #11151c;
+    color: #ddffdd;
+}
+
+.logo{
+    /*position: absolute;*/
+    float: center;
+    width: 20em;
+    height: 7em;
+    padding: 2em;
+    right: 30em;
+    z-index: 1;
+}
+
+.input{   
+    /*position: relative;*/
+    background-color: #C4C4C4;
+    font-family:'Quattrocento', serif;
+    letter-spacing: .2em;
+    color: rgb(187, 153, 153);
+}
+
+#Characters{
+    /*position: relative;*/
+    width: 1010px;
+    height: 161px;
+    left: 215px;
+    top: 351px;
+}
+
+select{
+    /*position: relative;*/
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 29px;
+    letter-spacing: 0.12em;
+    color: #CDCFCD;
+    background-color: #11151c;
+    border:none;
+}
+
+select:hover{
+    background-color: rgba(125, 78, 87, 0.7);
+    opacity: .8;
+}
