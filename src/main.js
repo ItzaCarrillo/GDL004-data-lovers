@@ -1,5 +1,5 @@
 
-import {filteredCharacters, subFilteredCharacters, filterBy, subFilterBy} from '/data.js';
+import {filteredCharacters, subFilteredCharacters, subFilterBy} from '/data.js';
 
 function NoneBlock(fromId) {
   let idArray = ["Start", "Characters", "sortingHat", "Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
