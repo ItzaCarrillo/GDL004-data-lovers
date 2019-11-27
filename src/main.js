@@ -1,39 +1,49 @@
-/* import { potterNames, potterHouse, potterBirthday, potterPatronus, potterWand, potterBlood } from './data.js';
-export { potterData }; */
+import POTTER from './data/potter/potter.js';
+import { potterTemplate } from './data.js';
 
-const URL_POTTER = 'https://raw.githubusercontent.com/Laboratoria/GDL004-data-lovers/master/src/data/potter/potter.json';
-let potterData;
+const potterData = POTTER;
 
-fetch(URL_POTTER)
-  .then(response => response.json())
-  .then(response => { // en esta promesa estamos llamando al json y mostrandolo en consola
-    potterData = response;
-    console.log(potterData);
-    return potterData;
-  });
+console.log(potterData);
 
-function potterTemplate(potter){
-    return `
-    <div class='potterCards'></div>
-        <h1>${potterData.name}</h1>
-        <img class='harryPhotos' src='${'dataPotter.image'}>
-        <p>House: ${potterData.house}</p>
-        <p>Blood status: ${potterData.ancestry}</p>
-        <p>Birthday: ${potterData.dateOfBirth}</p>
-        <p>Patronus: ${potterData.patronus}</p>
-        <p>Wand: ${potterData.wand.core}</p>
-    `
-}
+function NoneBlock(fromId) {
+    let idArray = ["Start", "Characters", "sortingHat", "Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
+    console.log(fromId)
+    for (let id in idArray) {
+      //console.log("ID in array = " + idArray[id])
+      if (idArray[id] == fromId) {
+        document.getElementById(fromId).style.display = "block";
+      }
+      else {
+        document.getElementById(idArray[id]).style.display = "none";
+      }
+    }
+  }
+  let startItem = document.getElementsByClassName("startItem");
+  startItem[0].addEventListener("click", function() {NoneBlock("Start")});
+  let charactersItem = document.getElementsByClassName("charactersItem");
+  charactersItem[0].addEventListener("click", function() {NoneBlock("Characters")});
+  let sortingHatItem = document.getElementsByClassName("sortingHatItem");
+  sortingHatItem[0].addEventListener("click", function() {NoneBlock("sortingHat")});
+  
+  let sortingHatBtn = document.getElementById("sortingHatBtn");
+  sortingHatBtn.addEventListener("click", function() {NoneBlock("sortingHat")});
+  let gryffindorBtn = document.getElementById("gryffindorBtn");
+  gryffindorBtn.addEventListener("click", function() {NoneBlock("Gryffindor")});
+  let slytherinBtn = document.getElementById("slytherinBtn");
+  slytherinBtn.addEventListener("click", function() {NoneBlock("Slytherin")});
+  let hufflepuffBtn = document.getElementById("hufflepuffBtn");
+  hufflepuffBtn.addEventListener("click", function() {NoneBlock("Hufflepuff")});
+  let ravenclawBtn = document.getElementById("ravenclawBtn");
+  ravenclawBtn.addEventListener("click", function() {NoneBlock("Ravenclaw")});
+  
+  gryffindorBtn.addEventListener("click",() => {filterBy("house","Gryffindor");
+                                  console.log(filteredCharacters);});
+  slytherinBtn.addEventListener("click",() =>{filterBy("house","Slytherin");});
+  hufflepuffBtn.addEventListener("click",() =>{filterBy("house","Hufflepuff");});
+  ravenclawBtn.addEventListener("click",() =>{filterBy("house","Ravenclaw");});
 
 // Show character cards
 document.getElementById('potterCards').innerHTML = `
-${potterData.map(potterTemplate).join('')}`
+${potterData.map(potterTemplate).join('')}`;
 
-/*`<h1>${potterNames()} </h1> 
 
-<p>House:${potterHouse()}</p>
-<p>Birthday:${potterBirthday()}</p>
-<p>Blood status:${potterBlood()}</p>
-<p>Wand:${potterWand()}</p>
-<p>Patronus:${potterPatronus()}</p>
-`*/

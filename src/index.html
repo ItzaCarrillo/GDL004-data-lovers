@@ -8,6 +8,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--Menu-->
+    <div id="hpmenu">
+      <button id="menu">MENU</button>
+      <nav id="hpmenu1">
+        <ul id=mainMenuList>
+          <li class="startItem"><a href="#Start">START</a></li>
+          <li class="charactersItem"><a href="#Characters">CHARACTERS</a></li>
+          <li class="sortingHatItem"><a href="#SortingHat">SORTING HAT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Pantalla de inicio-->
+    <div id="Start" class="style">
+      <p><img src=http://www.pngmart.com/files/3/Harry-Potter-Logo-PNG-Photos.png></p>
+      <h1>WITCHES & WIZARDS</h1>
+      <p></p></br>
+      <p><button id="sortingHatBtn">START THE JOURNEY</button></p>
+    </div>
+    <!--Buscador de personajes-->
     <div id='Characters'>
       <img src='http://www.thealmightyguru.com/Wiki/images/b/ba/Harry_Potter_-_Logo.png' alt='Harry Potter Logo' class='logo'>
       <div id='menuCharacters'>
@@ -42,71 +61,40 @@
       </div>
       <div id="potterCards"></div>  
     </div>
-    <script type="module" src="main.js"></script>
-  </body>
-</html>
-
-
-
-  <!--Menu-->
-   <!-- <nav>
-      <ul>
-        <li><a href="#Start" onclick="NoneBlock('Start')">START</a></li>
-        <li><a href="#Characters" onclick="NoneBlock('Characters')">CHARACTERS</a></li>
-        <li><a href="#SortingHat" onclick="NoneBlock('sortingHat')">SORTING HAT</a>
-          <ul>
-            <li><a href="#Gryffindor" onclick="NoneBlock('Gryffindor')">GRYFFINDOR</a></li>
-            <li><a href="#Slytherin" onclick="NoneBlock('Slytherin')">SLYTHERIN</a></li>
-            <li><a href="#Hufflepuff" onclick="NoneBlock('Hufflepuff')">HUFFLEPUFF</a></li>
-            <li><a href="#Ravenclaw" onclick="NoneBlock('Ravenclaw')">RAVENCLAW</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    Pantalla de inicio
-    <div id="Start" class="style">
-      <h1>WITCHES & WIZARDS</h1>
-      <p></p>
-      <button id="sortingHatBtn">START THE JOURNEY</button>
-    </div> -->
-
-    <!--BUSCADOR PERSONAJES
-    <div id='Characters'>
-      <img src='http://www.thealmightyguru.com/Wiki/images/b/ba/Harry_Potter_-_Logo.png' alt='Harry Potter Logo' class='logo'>
-      <div id='menuCharacters'>
-        
-      </div>
-    </div>-->
-
-    <!-- Pantalla Sorting Hat seleccionador de casas
+    <!-- Pantalla Sorting Hat seleccionador de casas-->
     <div id="sortingHat" class="houses">
       <h1>SORTING HAT</h1>
-      <p>Pick your Hogwarts house:</p>
+      <p>Pick your Hogwarts house</p>
       <button id="gryffindorBtn">GRYFFINDOR</button>
       <button id="slytherinBtn">SLYTHERIN</button>
       <button id="hufflepuffBtn">HUFFLEPUFF</button>
       <button id="ravenclawBtn">RAVENCLAW</button>
-    </div>-->
-
-    <!--GRYFFINDOR
+    </div>
+    <!--GRYFFINDOR-->
     <div id="Gryffindor" class="Gryffindor">
+      <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249">
       <h1>GRYFFINDOR</h1>
-      <p>House of the brave, bold and daring</p>
-    </div> -->
-
-    <!--SLYTHERIN
+      <p>Brave, Nerve, Athletic, Courage, Chivalry and Daring</p>
+    </div>
+    <!--SLYTHERIN-->
     <div id="Slytherin" class="Slytherin">
+      <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/6/69/Slytherin_Pottermore.png/revision/latest?cb=20141001130915">
       <h1>SLYTHERIN</h1>
-    </div> -->
-    <!--HUFFLEPUFF
+      <p>Resourcefulness, Cunning, Ambition, Determination, Leadership and Cleverness</p>
+    </div>
+    <!--HUFFLEPUFF-->
     <div id="Hufflepuff" class="Hufflepuff">
+      <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135">
       <h1>HUFFLEPUFF</h1>
-    </div>-->
-
-    <!--RAVENCLAW
+      <p>Dedication, Hard working, Fairness, Patience, Kindness, Loyalty and Tolerance</p>
+    </div>
+    <!--RAVENCLAW-->
     <div id="Ravenclaw" class="Ravenclaw">
+      <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914">
       <h1>RAVENCLAW</h1>
-    </div> -->
+      <p>Intelligence, Wit, Wisdom, Creativity, Acceptance, Originality and Individuality</p>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
 
-    

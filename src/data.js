@@ -1,39 +1,21 @@
-import { potterData } from './main.js';
-/* export { potterNames, potterHouse, potterBirthday, potterPatronus, potterWand, potterBlood };
+import POTTER from './data/potter/potter.js';
+
+export { potterTemplate };
+
+function potterTemplate(cards) {
+  return `
+  <div class='characterBox'></div>
+      <h1>${cards.name}</h1>
+      <img class='harryPhotos' src=${dataPotter.image}>
+      <p><strong>House:</strong>${cards.house} </p>
+      <p><strong> Blood status: </strong> ${cards.ancestry}</p>
+      <p><strong> Birthday:</strong> ${cards.dateOfBirth}</p>
+      <p><strong> Patronus:</strong> ${cards.patronus}</p>
+      <p><strong> Wand:</strong> ${cards.wand}</p>`;
+}
 
 
-let potterNames= '';
-for (let i=0; i < potterData.length; i++) {
-  console.log(potterData[i].name); //Muestra el loop correcto
-  potterData[i].name = potterNames;
-};
-
-let potterHouse= '';
-for (let i=0; i < potterData.length; i++) {
-  console.log(potterData[i].house); //Muestra el loop correcto
-  potterData[i].house = potterHouse;
-};
-
-let potterBirthday= '';
-for (let i=0; i < potterData.length; i++) {
-  console.log(potterData[i].dateOfBirth); //Muestra el loop correcto
-  potterData[i].dateOfBirth = potterBirthday;
-};
-
-let potterPatronus= '';
-for (let i=0; i < potterData.length; i++) {
-  console.log(potterData[i].patronus); //Muestra el loop correcto
-  potterData[i].patronus = potterPatronus;
-};
-
-let potterWand= '';
-for (let i=0; i < potterData.length; i++) {
-  console.log(potterData[i].wand.core); //Muestra el loop correcto
-  potterData[i].wand.core = potterWand;
-};
-
-let potterBlood= '';
-for (let i=0; i < potterData.length; i++) {
-  console.log(potterData[i].ancestry); //Muestra el loop correcto
-  potterData[i].ancestry = potterBlood;
-}; */
+/* <strong> Blood status: </strong> ${cards.ancestry}
+<strong> Birthday:</strong> ${cards.dateOfBirth}
+<strong> Patronus:</strong> ${cards.patronus}
+<strong> Wand:</strong> ${cards.wand}</p> */
