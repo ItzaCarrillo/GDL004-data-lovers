@@ -1,47 +1,105 @@
 body{
-    background-color: #11151c;
-    color: #ddffdd;
-}
-
-.logo{
-    /*position: absolute;*/
+    background-color: #11151C;
+    color: #DDFFDD;
+  }
+  /*button.menu{
+    background-color: black;
+    color: white;
+    float:left;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  .mainMenu{
+    float: left;
+    position: relative;
+    display: inline-block;
+  }
+  .hpMenu{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .hpMenu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .hpmenu a:hover {background-color: gray;}
+  .mainMenu:hover .hpmenu {display: block;}
+  .mainMenu:hover button.menu {background-color: black;}*/
+  #Start {
+    display: block;
+    background:black;
+    text-align: center;
+  }
+  /* Filter menu */
+  input{
+      background-color: #C4C4C4;
+      font-family:'Quattrocento', serif;
+      letter-spacing: .2em;
+      color: rgb(187, 153, 153);
+  }
+  select{
+      font-family: Quattrocento;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 29px;
+      letter-spacing: 0.12em;
+      color: #CDCFCD;
+      background-color: #11151C;
+      border:none;
+  }
+  select:hover{
+      background-color: rgba(125, 78, 87, 0.7);
+      opacity: .8;
+  }
+  /* Characters screen */
+  #Characters {
+    display: none;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .logo{
     float: center;
     width: 20em;
     height: 7em;
     padding: 2em;
     right: 30em;
     z-index: 1;
-}
-
-.input{   
-    /*position: relative;*/
-    background-color: #C4C4C4;
-    font-family:'Quattrocento', serif;
-    letter-spacing: .2em;
-    color: rgb(187, 153, 153);
-}
-
-#Characters{
-    /*position: relative;*/
-    width: 1010px;
-    height: 161px;
-    left: 215px;
-    top: 351px;
-}
-
-select{
-    /*position: relative;*/
-    font-family: Quattrocento;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 29px;
-    letter-spacing: 0.12em;
-    color: #CDCFCD;
-    background-color: #11151c;
-    border:none;
-}
-
-select:hover{
-    background-color: rgba(125, 78, 87, 0.7);
-    opacity: .8;
-}
+  }
+  #sortingHat {
+    display: none;
+    background-color: black;
+    button: center;
+    text-align: center;
+  }
+  #Gryffindor {
+    display: none;
+    background-color:#7D0E0E;
+    image-orientation: center;
+    text-align: center;
+  }
+  #Slytherin {
+    display: none;
+    background-color:#113A1A;
+    image-orientation: center;
+    text-align: center;
+  }
+  #Hufflepuff {
+    display: none;
+    background-color: #BF9119;
+    image-orientation: center;
+    text-align: center;
+  }
+  #Ravenclaw {
+    display: none;
+    background-color: #272D4D;
+    image-orientation: center;
+    text-align: center;

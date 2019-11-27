@@ -1,19 +1,18 @@
-import POTTER from './data/potter/potter.js';
-import { potterTemplate } from './data.js';
+import POTTER from './data/potter/potter.js'
 
-const potterData = POTTER;
-
+import { potterTemplate, filterBy } from './data.js';
+console.log(filterBy)
+//const potterData = POTTER;
 console.log(potterData);
-
+//Navegacion main menu
 function NoneBlock(fromId) {
-    let idArray = ["Start", "Characters", "sortingHat", "Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
-    console.log(fromId)
-    for (let id in idArray) {
-      //console.log("ID in array = " + idArray[id])
+  let idArray = ["Start", "Characters", "sortingHat", "Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
+  //console.log(fromId)
+  for (let id in idArray) {
+    //console.log("ID in array = " + idArray[id])
       if (idArray[id] == fromId) {
         document.getElementById(fromId).style.display = "block";
-      }
-      else {
+      } else {
         document.getElementById(idArray[id]).style.display = "none";
       }
     }
@@ -24,7 +23,15 @@ function NoneBlock(fromId) {
   charactersItem[0].addEventListener("click", function() {NoneBlock("Characters")});
   let sortingHatItem = document.getElementsByClassName("sortingHatItem");
   sortingHatItem[0].addEventListener("click", function() {NoneBlock("sortingHat")});
-  
+  let gryffindorItem = document.getElementsByClassName("gryffindorItem");
+  gryffindorItem[0].addEventListener("click", function() {NoneBlock("Gryffindor")});
+  let slytherinItem = document.getElementsByClassName("slytherinItem");
+  slytherinItem[0].addEventListener("click", function() {NoneBlock("Slytherin")});
+  let hufflepuffItem = document.getElementsByClassName("hufflepuffItem");
+  hufflepuffItem[0].addEventListener("click", function() {NoneBlock("Hufflepuff")});
+  let ravenclawItem = document.getElementsByClassName("ravenclawItem");
+  ravenclawItem[0].addEventListener("click", function() {NoneBlock("Ravenclaw")});
+//Botones sorting hat
   let sortingHatBtn = document.getElementById("sortingHatBtn");
   sortingHatBtn.addEventListener("click", function() {NoneBlock("sortingHat")});
   let gryffindorBtn = document.getElementById("gryffindorBtn");
@@ -35,15 +42,11 @@ function NoneBlock(fromId) {
   hufflepuffBtn.addEventListener("click", function() {NoneBlock("Hufflepuff")});
   let ravenclawBtn = document.getElementById("ravenclawBtn");
   ravenclawBtn.addEventListener("click", function() {NoneBlock("Ravenclaw")});
-  
-  gryffindorBtn.addEventListener("click",() => {filterBy("house","Gryffindor");
-                                  console.log(filteredCharacters);});
-  slytherinBtn.addEventListener("click",() =>{filterBy("house","Slytherin");});
-  hufflepuffBtn.addEventListener("click",() =>{filterBy("house","Hufflepuff");});
-  ravenclawBtn.addEventListener("click",() =>{filterBy("house","Ravenclaw");});
-
-// Show character cards
+//Tarjetas personajes
 document.getElementById('potterCards').innerHTML = `
 ${potterData.map(potterTemplate).join('')}`;
-
-
+// Filtros personajes por casa
+gryffindorBtn.addEventListener("click",() => {
+  filterBy("house","Gryffindor");
+  console.log(filteredCharacters);
+});
