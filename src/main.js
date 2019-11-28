@@ -1,9 +1,12 @@
-import POTTER from './data/potter/potter.js'
+import potterData from './data/potter/potter.js';
 
-import { potterTemplate, filterBy } from './data.js';
-console.log(filterBy)
-//const potterData = POTTER;
-console.log(potterData);
+import {filteredCharacters, subFilteredCharacters, filterBy, subFilterBy, potterTemplate, charactersByRole } from '/data.js';
+
+export { potterData };
+
+let fPotter = [];
+//console.log(potterData)
+
 //Navegacion main menu
 function NoneBlock(fromId) {
   let idArray = ["Start", "Characters", "sortingHat", "Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
@@ -17,6 +20,7 @@ function NoneBlock(fromId) {
       }
     }
   }
+  //function ()
   let startItem = document.getElementsByClassName("startItem");
   startItem[0].addEventListener("click", function() {NoneBlock("Start")});
   let charactersItem = document.getElementsByClassName("charactersItem");
@@ -31,7 +35,8 @@ function NoneBlock(fromId) {
   hufflepuffItem[0].addEventListener("click", function() {NoneBlock("Hufflepuff")});
   let ravenclawItem = document.getElementsByClassName("ravenclawItem");
   ravenclawItem[0].addEventListener("click", function() {NoneBlock("Ravenclaw")});
-//Botones sorting hat
+
+  //Botones sorting hat
   let sortingHatBtn = document.getElementById("sortingHatBtn");
   sortingHatBtn.addEventListener("click", function() {NoneBlock("sortingHat")});
   let gryffindorBtn = document.getElementById("gryffindorBtn");
@@ -42,11 +47,40 @@ function NoneBlock(fromId) {
   hufflepuffBtn.addEventListener("click", function() {NoneBlock("Hufflepuff")});
   let ravenclawBtn = document.getElementById("ravenclawBtn");
   ravenclawBtn.addEventListener("click", function() {NoneBlock("Ravenclaw")});
+
 //Tarjetas personajes
 document.getElementById('potterCards').innerHTML = `
 ${potterData.map(potterTemplate).join('')}`;
+
 // Filtros personajes por casa
 gryffindorBtn.addEventListener("click",() => {
-  filterBy("house","Gryffindor");
-  console.log(filteredCharacters);
+  fPotter = filterBy("house","Gryffindor");
+  //fPotter = subFilterBy("house","Gryffindor","gender","male")
+  document.getElementById("infoToFilterGryffindor").innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
 });
+slytherinBtn.addEventListener("click",() => {
+  fPotter = filterBy("house","Slytherin");
+  //fPotter = subFilterBy("house","Gryffindor","patronus","stag")
+  document.getElementById("infoToFilterSlytherin").innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
+hufflepuffBtn.addEventListener("click",() => {
+  fPotter = filterBy("house","Hufflepuff");
+  //fPotter = subFilterBy("house","Gryffindor","patronus","stag")
+  document.getElementById("infoToFilterHufflepuff").innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
+ravenclawBtn.addEventListener("click",() => {
+  fPotter = filterBy("house","Ravenclaw");
+  //fPotter = subFilterBy("house","Gryffindor","patronus","stag")
+  document.getElementById("infoToFilterRavenclaw").innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
+
+// Menú de búsqueda personajes
+document.getElementById('nameList').innerHTML = JSON.stringify(potterData.name);
+//document.getElementById('patronusList').innerHTML = potterData.name;
+
+
+document.getElementById("charactersRole").addEventListener("change", charactersByRole)

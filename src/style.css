@@ -34,9 +34,41 @@ body{
   .mainMenu:hover button.menu {background-color: black;}*/
   #Start {
     display: block;
-    background:black;
+    background-image: url('http://i.imgur.com/CMWTqJx.jpg?1');
     text-align: center;
   }
+  #Start h1 {
+    font-family:'Quattrocento', serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 0px;
+    letter-spacing: 0.12em;
+    color: #CDCFCD;
+  }
+  .startLogo{
+    width: 516px;
+  }
+  #Start button{
+    background: #57A879;
+    color: #CDCFCD;
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: 0.12em;
+    border-color: #57A879;
+    border: none;
+    border-radius: 8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  #Start button:hover{
+    background:  rgba(125, 78, 87, 0.6);
+  }
+
   /* Filter menu */
   input{
       background-color: #C4C4C4;
