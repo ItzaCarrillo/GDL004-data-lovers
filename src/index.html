@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Data Lovers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Fanwood+Text&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <title>W & W WIZARDS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fanwood+Text&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
-</head>
+  </head>
   <body>
-
-    <!--Menu-->
-    <div id="hpmenu">
-      <button id="menu">MENU</button>
-      <nav id="hpmenu1">
-        <ul id=mainMenuList>
+    <!-- MAIN MENU -->
+    <div class="mainMenu">
+      <button class="menu">MENU</button>
+      <nav class="hpMenu">
+        <ul class=mainMenuList>
           <li class="startItem"><a href="#Start">START</a></li>
           <li class="charactersItem"><a href="#Characters">CHARACTERS</a></li>
-          <li class="sortingHatItem"><a href="#SortingHat">SORTING HAT</a></li>
+          <li class="sortingHatItem"><a href="#SortingHat">SORTING HAT</a> </li>
+          <li class="gryffindorItem"><a href="#Gryffindor" >GRYFFINDOR</a></li>
+          <li class="slytherinItem"><a href="#Slytherin" >SLYTHERIN</a></li>
+          <li class="hufflepuffItem"><a href="#Hufflepuff">HUFFLEPUFF</a></li>
+          <li class="ravenclawItem"><a href="#Ravenclaw">RAVENCLAW</a></li>
         </ul>
       </nav>
     </div>
-
-    <!--Pantalla de inicio-->
+    <!-- STARTING SCREEN -->
     <div id="Start" class="style">
-      <p><img src=http://www.pngmart.com/files/3/Harry-Potter-Logo-PNG-Photos.png></p>
+      <img src='http://www.thealmightyguru.com/Wiki/images/b/ba/Harry_Potter_-_Logo.png'>
       <h1>WITCHES & WIZARDS</h1>
       <p></p></br>
       <p><button id="sortingHatBtn">START THE JOURNEY</button></p>
     </div>
-
-    <!--BUSCADOR PERSONAJES-->
-    <div id="Characters" class="personajes">
-      <h1>CHARACTERS</h1>
-        <form>
-          <input list="filterBy" name="filterBy">
-          <datalist id="filterBy">
-        </datalist>
-        </form>
-    </div>
-
-    <!-- Pantalla Sorting Hat seleccionador de casas-->
-    <div id="sortingHat" class="houses">
+    <!-- CHARACTERS -->
+    <div id='Characters'>
+     <img src='http://www.thealmightyguru.com/Wiki/images/b/ba/Harry_Potter_-_Logo.png' alt='Harry Potter Logo' class='logo'>
+     <div id='menuCharacters'>
+       <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
+       <div>
+         <select name='patronus'>
+           <option selected value="0">Patronus</option>
+           <option value="1">Stag</option>
+           <option value="2">Otter</option>
+           <option value="3">Horse</option>
+           <option value="4">Wolf</option>
+           <option value="5">Jack Rusell Terrier</option>
+         </select>
+       </div>
+       <div>
+           <select name="wand">
+             <option selected value="0">Wand</option>
+             <option value="1">Unicorn Hair</option>
+             <option value="2">Dragon Heartstring</option>
+             <option value="3">Phoenix Feather</option>
+             <option value="4">Unknown</option>
+           </select>
+         </div>
+         <div>
+             <select name="role">
+               <option selected value="0">Role</option>
+               <option value="1">Hogwarts Student</option>
+               <option value="2">Hogwarts Professor</option>
+               <option value="3">Other/Unknown</option>
+             </select>
+           </div>
+     </div>
+     <div id="potterCards"></div>
+   </div>
+   <!-- SORTING HAT -->
+   <div id="sortingHat" class="houses">
       <h1>SORTING HAT</h1>
       <p>Pick your Hogwarts house</p>
       <button id="gryffindorBtn">GRYFFINDOR</button>
@@ -50,37 +76,155 @@
       <button id="hufflepuffBtn">HUFFLEPUFF</button>
       <button id="ravenclawBtn">RAVENCLAW</button>
     </div>
-
     <!--GRYFFINDOR-->
     <div id="Gryffindor" class="Gryffindor">
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249">
       <h1>GRYFFINDOR</h1>
       <p>Brave, Nerve, Athletic, Courage, Chivalry and Daring</p>
+      <div id='menuCharacters'>
+        <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
+          <div>
+            <select name='patronus'>
+              <option selected value="0">Patronus</option>
+              <option value="1">Stag</option>
+              <option value="2">Otter</option>
+              <option value="3">Horse</option>
+              <option value="4">Wolf</option>
+              <option value="5">Jack Rusell Terrier</option>
+              <option value="6">Tabby cat</option>
+              <option value="7">Hare</option>
+              <option value="8">Weasel</option>
+            </select>
+          </div>
+          <div>
+            <select name="wand">
+              <option selected value="0">Wand</option>
+              <option value="1">Unicorn Hair</option>
+              <option value="2">Dragon Heartstring</option>
+              <option value="3">Phoenix Feather</option>
+              <option value="4">Unknown</option>
+            </select>
+          </div>
+          <div>
+              <select name="role">
+                <option selected value="0">Role</option>
+                <option value="1">Hogwarts Student</option>
+                <option value="2">Hogwarts Professor</option>
+                <option value="3">Other/Unknown</option>
+              </select>
+          </div>
+      </div>
+      <div id="infoToFilterGryffindor"></div>
     </div>
-
     <!--SLYTHERIN-->
     <div id="Slytherin" class="Slytherin">
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/6/69/Slytherin_Pottermore.png/revision/latest?cb=20141001130915">
       <h1>SLYTHERIN</h1>
       <p>Resourcefulness, Cunning, Ambition, Determination, Leadership and Cleverness</p>
+      <div id='menuCharacters'>
+        <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
+        <div>
+          <select name='patronus'>
+            <option selected value="0">Patronus</option>
+            <option value="1">Stag</option>
+            <option value="2">Otter</option>
+            <option value="3">Horse</option>
+            <option value="4">Wolf</option>
+            <option value="5">Jack Rusell Terrier</option>
+          </select>
+        </div>
+        <div>
+            <select name="wand">
+              <option selected value="0">Wand</option>
+              <option value="1">Unicorn Hair</option>
+              <option value="2">Dragon Heartstring</option>
+              <option value="3">Phoenix Feather</option>
+              <option value="4">Unknown</option>
+            </select>
+          </div>
+          <div>
+              <select name="role">
+                <option selected value="0">Role</option>
+                <option value="1">Hogwarts Student</option>
+                <option value="2">Hogwarts Professor</option>
+                <option value="3">Other/Unknown</option>
+              </select>
+            </div>
+          <div id="infoToFilterSlytherin"></div>
+      </div>
     </div>
     <!--HUFFLEPUFF-->
     <div id="Hufflepuff" class="Hufflepuff">
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135">
       <h1>HUFFLEPUFF</h1>
       <p>Dedication, Hard working, Fairness, Patience, Kindness, Loyalty and Tolerance</p>
+      <div id='menuCharacters'>
+        <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
+        <div>
+          <select name='patronus'>
+            <option selected value="0">Patronus</option>
+            <option value="1">Stag</option>
+            <option value="2">Otter</option>
+            <option value="3">Horse</option>
+            <option value="4">Wolf</option>
+            <option value="5">Jack Rusell Terrier</option>
+          </select>
+        </div>
+        <div>
+            <select name="wand">
+              <option selected value="0">Wand</option>
+              <option value="1">Unicorn Hair</option>
+              <option value="2">Dragon Heartstring</option>
+              <option value="3">Phoenix Feather</option>
+              <option value="4">Unknown</option>
+            </select>
+          </div>
+          <div>
+              <select name="role">
+                <option selected value="0">Role</option>
+                <option value="1">Hogwarts Student</option>
+                <option value="2">Hogwarts Professor</option>
+                <option value="3">Other/Unknown</option>
+              </select>
+            </div>
+      </div>
     </div>
-
     <!--RAVENCLAW-->
     <div id="Ravenclaw" class="Ravenclaw">
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914">
       <h1>RAVENCLAW</h1>
       <p>Intelligence, Wit, Wisdom, Creativity, Acceptance, Originality and Individuality</p>
+      <div id='menuCharacters'>
+        <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
+        <div>
+          <select name='patronus'>
+            <option selected value="0">Patronus</option>
+            <option value="1">Stag</option>
+            <option value="2">Otter</option>
+            <option value="3">Horse</option>
+            <option value="4">Wolf</option>
+            <option value="5">Jack Rusell Terrier</option>
+          </select>
+        </div>
+        <div>
+            <select name="wand">
+              <option selected value="0">Wand</option>
+              <option value="1">Unicorn Hair</option>
+              <option value="2">Dragon Heartstring</option>
+              <option value="3">Phoenix Feather</option>
+              <option value="4">Unknown</option>
+            </select>
+          </div>
+          <div>
+              <select name="role">
+                <option selected value="0">Role</option>
+                <option value="1">Hogwarts Student</option>
+                <option value="2">Hogwarts Professor</option>
+                <option value="3">Other/Unknown</option>
+              </select>
+            </div>
+      </div>
     </div>
-
-    <script type="module" src="main.js">
-    </script>
-    <script type="module" src="data.js">
-    </script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
