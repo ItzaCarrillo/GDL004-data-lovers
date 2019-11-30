@@ -58,7 +58,7 @@ export default [
       core: 'unicorn tail-hair',
       length: 14,
     },
-    patronus: 'Jack Russell terrier',
+    patronus: 'jack russell terrier',
     hogwartsStudent: true,
     hogwartsStaff: false,
     actor: 'Rupert Grint',

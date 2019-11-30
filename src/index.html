@@ -12,7 +12,8 @@
   <body>
     <!-- MAIN MENU -->
     <div class="mainMenu">
-      <button class="menu">MENU</button>
+      <img class="menuSymbol" src="https://image.flaticon.com/icons/svg/149/149021.svg">
+      <!--button class="menu">MENU</button-->
       <nav class="hpMenu">
         <ul class=mainMenuList>
           <li class="startItem"><a href="#Start">START</a></li>
@@ -29,8 +30,8 @@
     <div id="Start" class="style">
       <h1>WITCHES AND WIZARDS OF</h1>
       <img src='http://www.thealmightyguru.com/Wiki/images/b/ba/Harry_Potter_-_Logo.png' class='startLogo'>
-      <p></p></br>
-      <p><button id="sortingHatBtn">START THE JOURNEY</button></p>
+      <p> Get to know all the characters from the beloved Harry Potter series with our Witches and Wizards of Harry Potter cards, where you will find curious information about yur favourite protagonists and other wizardling world personas.</p></br>
+      <button id="sortingHatBtn">START THE JOURNEY</button>
     </div>
     <!-- CHARACTERS -->
     <div id='Characters'>
@@ -38,13 +39,18 @@
      <div id='menuCharacters'>
        <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
        <div>
-         <select name='patronus'>
-           <option selected value="0">Patronus</option>
-           <option value="1">Stag</option>
-           <option value="2">Otter</option>
-           <option value="3">Horse</option>
-           <option value="4">Wolf</option>
-           <option value="5">Jack Rusell Terrier</option>
+         <select name='patronus' id="patronus">
+            <option selected value="0">Patronus</option>
+            <option value="1">Stag</option>
+            <option value="2">Otter</option>
+            <option value="3">Jack Rusell Terrier</option>
+            <option value="4">Tabby cat</option>
+            <option value="5">Swan</option>
+            <option value="6">Doe</option>
+            <option value="7">Hare</option>
+            <option value="8">Horse</option>
+            <option value="9">Wolf</option>
+            <option value="10">Weasel</option>
          </select>
        </div>
        <div>
@@ -71,7 +77,11 @@
    <div id="sortingHat" class="houses">
       <h1>SORTING HAT</h1>
       <p>Pick your Hogwarts house</p>
-      <button id="gryffindorBtn">GRYFFINDOR</button>
+      <img class=sortingLogo a href="#Gryffindor" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249">
+      <img class=sortingLogo a href="#Slytherin" src="https://vignette.wikia.nocookie.net/pottermore-blabla/images/a/a3/Blason_Serpentard.png/revision/latest?cb=20121030215201&path-prefix=fr">
+      <img class=sortingLogo a href="#Hufflepuff" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135">
+      <img class=sortingLogo a href="#Ravenclaw" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914"><br>
+      <button id="gryffindorBtn" src="https://i0.wp.com/magiayhechiceria.com/wp-content/uploads/2018/12/gryffindor.png?fit=1080%2C1200&ssl=1">GRYFFINDOR</button>      
       <button id="slytherinBtn">SLYTHERIN</button>
       <button id="hufflepuffBtn">HUFFLEPUFF</button>
       <button id="ravenclawBtn">RAVENCLAW</button>
@@ -84,18 +94,19 @@
       <div id='menuCharacters'>
         <input type="text" name="search" id="name search" placeholder="Search by name..." class="input" list="nameList"> </input> 
           <datalist id="nameList"></datalist>
-        <!--input.placeholder/setAttribute-->
           <div>
             <select name='patronus'>
               <option selected value="0">Patronus</option>
               <option value="1">Stag</option>
               <option value="2">Otter</option>
-              <option value="3">Horse</option>
-              <option value="4">Wolf</option>
-              <option value="5">Jack Rusell Terrier</option>
-              <option value="6">Tabby cat</option>
+              <option value="3">Jack Rusell Terrier</option>
+              <option value="4">Tabby cat</option>
+              <option value="5">Swan</option>
+              <option value="6">Doe</option>
               <option value="7">Hare</option>
-              <option value="8">Weasel</option>
+              <option value="8">Horse</option>
+              <option value="9">Wolf</option>
+              <option value="10">Weasel</option>
             </select>
           </div>
           <div>

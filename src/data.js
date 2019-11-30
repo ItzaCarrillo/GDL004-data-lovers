@@ -1,50 +1,68 @@
-import {potterData} from './main.js';
+import potterData from './data/potter/potter.js';
 
-export { filteredCharacters, subFilteredCharacters, filterBy, subFilterBy, potterTemplate, charactersByRole };
+export {
+  filterBy, potterTemplate, patronusFilter, wandFilter, roleFilter,
+};
 
 let filteredCharacters = [];
 let subFilteredCharacters = [];
 
-//Filtrar personajes por casas
+// Filtro personajes
 function filterBy(filterKey, filterValue) {
-  // console.log(filterKey + " and " + filterValue);
-  filteredCharacters = potterData.filter(movieCharacter => (movieCharacter[filterKey] === filterValue));
-  // console.log(filteredCharacters)
+  filteredCharacters = potterData.filter((movieCharacter) => (movieCharacter[filterKey] === filterValue));
   return filteredCharacters;
 };
 
+//Filtro personajes + casa
 function subFilterBy(filter1Key, filter1Value, filter2Key, filter2Value) {
-    let filterByResult = filterBy(filter1Key, filter1Value);
-    //console.log("el resultado de FilterBy es: " + filterByResult);
-    //console.log(filteredCharacters);
-    subFilteredCharacters = filteredCharacters.filter(movieCharacter => (movieCharacter[filter2Key] === filter2Value));
-    //console.log(subFilteredCharacters);
-    return subFilteredCharacters;
+  const filterByResult = filterBy(filter1Key, filter1Value);
+  // console.log("el resultado de FilterBy es: " + filterByResult);
+  // console.log(filteredCharacters);
+  subFilteredCharacters = filteredCharacters.filter((movieCharacter) => (movieCharacter[filter2Key] === filter2Value));
+  // console.log(subFilteredCharacters);
+  return subFilteredCharacters;
 };
 
 //Template tarjetas personaje
 function potterTemplate(cards) {
   return `
-  <div class='characterBox'></div>
+  <div class='characterBox'>
       <h1>${cards.name}</h1>
       <img class='harryPhotos' src=${cards.image}>
       <p><strong>House:</strong>${cards.house} </p>
       <p><strong> Blood status: </strong> ${cards.ancestry}</p>
       <p><strong> Birthday:</strong> ${cards.dateOfBirth}</p>
       <p><strong> Patronus:</strong> ${cards.patronus}</p>
-      <p><strong> Wand:</strong> ${cards.wand.core}</p>`;
+      <p><strong> Wand:</strong> ${cards.wand.core}</p>
+  </div>`;
 };
 
-function charactersByRole() {
-  let selectedRole= document.getElementById("charactersWand").value;     
-  document.getElementById("potterCards").innerHtml = "";
-  switch (selectedRole) { 
-    case "Hogwarts Student": 
-    filterBy ("hogwartsStudent", "true");
-    break;
-    case "Hogwarts Staff":
-    filterBy ("hogwartsStaff", "true");
-    break;
-    case "Other/Unknown":
-  }
+
+// Filtro patronus
+function patronusFilter(data, input) {
+  console.log(input)
+  return data.filter((persona) => {
+    if (persona.patronus === input){
+      return persona;
+    };
+  });
 };
+
+function wandFilter(data, input) {
+  console.log(input)
+  return data.filter((persona) => {
+    if (persona.wand === input){
+      return persona;
+    };
+  });
+};
+
+function roleFilter(data, input) {
+  console.log(input)
+  return data.filter((persona) => {
+    if (persona.role === input){
+      return persona;
+    };
+  });
+}
+

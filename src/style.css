@@ -1,54 +1,74 @@
 body{
     background-color: #11151C;
     color: #DDFFDD;
-  }
-  /*button.menu{
-    background-color: black;
-    color: white;
-    float:left;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  .mainMenu{
+}
+/*Menu de navegación */
+.mainMenu{
+    position: relative;  
+    display: inline-block;  
     float: left;
-    position: relative;
-    display: inline-block;
-  }
-  .hpMenu{
-    display: none;
-    position: absolute;
-    background-color: black;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .hpMenu a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
+}
+.menuSymbol{
+    height: 2em;
+    width: 2em;
+}
+.mainMenuList{
+    display: none; 
+    background-color: rgba(17, 21, 28, 0.6);  
+    z-index: -1;
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 62px;
+    letter-spacing: 0.12em;
+    color: #CDCFCD;
+}
+.mainMenuList a:hover{
+    background-color: rgba(125, 78, 87, 0.6);
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 62px;
+    letter-spacing: 0.12em;
+    color: #CDCFCD;
+}
+.mainMenu:hover .mainMenuList{
     display: block;
-  }
-  .hpmenu a:hover {background-color: gray;}
-  .mainMenu:hover .hpmenu {display: block;}
-  .mainMenu:hover button.menu {background-color: black;}*/
-  #Start {
+}
+.mainMenu:hover .menuSymbol{
+    background-color: transparent;
+} 
+
+/* Start screen */
+#Start {
     display: block;
-    background-image: url('http://i.imgur.com/CMWTqJx.jpg?1');
+    background-image: url('https://i.ibb.co/qRTgXrV/fondoinicio.png');
     text-align: center;
-  }
-  #Start h1 {
+    height: 150%;
+}
+#Start h1 {
     font-family:'Quattrocento', serif;
     font-weight: bold;
     font-size: 32px;
     line-height: 0px;
     letter-spacing: 0.12em;
     color: #CDCFCD;
-  }
-  .startLogo{
+}
+.startLogo{
     width: 516px;
-  }
-  #Start button{
+}
+#Start p {
+    font-family: 'Fanwood Text', serif;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.12em;
+    padding-left: 14em;
+    padding-right: 14em;
+}  
+#Start button{
     background: #57A879;
     color: #CDCFCD;
     font-family: Quattrocento;
@@ -64,74 +84,150 @@ body{
     padding-right: 1em;
     padding-top: .5em;
     padding-bottom: .5em;
-  }
-  #Start button:hover{
+}
+#Start button:hover{
     background:  rgba(125, 78, 87, 0.6);
-  }
+}
 
-  /* Filter menu */
-  input{
+/* Sorting Hat */
+#sortingHat {
+    display: none;
+    background-color: #11151C;
+    text-align: center;
+}
+#sortingHat h1{
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: 0.12em;
+    color: #CDCFCD;
+}
+#sortingHat p{
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: 0.12em;    
+    color: #CDCFCD;
+    padding-top: 4em;
+}
+#sortingHat button{
+    font-family: Quattrocento;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 31px;
+    letter-spacing: 0.12em;
+    color: #CDCFCD;
+    background-color: #11151C;
+    border: none;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.sortingLogo{
+    width: 195px;
+    height: 223px;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+/* Filter menu */
+input{
       background-color: #C4C4C4;
       font-family:'Quattrocento', serif;
       letter-spacing: .2em;
       color: rgb(187, 153, 153);
-  }
-  select{
+      width: auto;
+}
+select{
       font-family: Quattrocento;
       font-style: normal;
       font-weight: bold;
       line-height: 29px;
       letter-spacing: 0.12em;
       color: #CDCFCD;
-      background-color: #11151C;
+      background-color: transparent;
       border:none;
-  }
-  select:hover{
+}
+select:hover{
       background-color: rgba(125, 78, 87, 0.7);
       opacity: .8;
-  }
-  /* Characters screen */
-  #Characters {
+}
+/* Characters screen */
+#Characters {
     display: none;
     background-color: black;
     width: 100%;
     height: auto;
     text-align: center;
-  }
-  .logo{
+}
+.logo{
     float: center;
     width: 20em;
     height: 7em;
     padding: 2em;
     right: 30em;
     z-index: 1;
-  }
-  #sortingHat {
-    display: none;
-    background-color: black;
-    button: center;
-    text-align: center;
-  }
-  #Gryffindor {
+}
+#Gryffindor {
     display: none;
     background-color:#7D0E0E;
     image-orientation: center;
     text-align: center;
-  }
-  #Slytherin {
+}
+#Slytherin {
     display: none;
     background-color:#113A1A;
     image-orientation: center;
     text-align: center;
-  }
-  #Hufflepuff {
+}
+#Hufflepuff {
     display: none;
     background-color: #BF9119;
     image-orientation: center;
     text-align: center;
-  }
-  #Ravenclaw {
+}
+#Ravenclaw {
     display: none;
     background-color: #272D4D;
     image-orientation: center;
     text-align: center;
+}
+
+/* Character cards */
+.harryPhotos{
+    width: 166px;
+    height: 227px;
+}
+#potterCards h1{
+    font-family: 'Quattrocento', serif;
+    letter-spacing: .4em;
+    font-size: 18px;
+    color: purple;
+    text-align: center;
+}
+#potterCards{
+    height: auto;
+    width: auto;
+    padding: 2em;
+    font-family: 'Fanwood';
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.characterBox{
+    background-color: white;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    /*padding-bottom: 1em;*/
+    max-width: 352px;
+}
