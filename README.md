@@ -51,7 +51,7 @@ acuerdo a las necesidades de usuarios, se eligio el estilo y colores para asegur
 
 
 ## 4. Primer prototipo
-![pantalla1](/src/Images/pantalla1.jpg)
+![pantalla1](./src/Images/pantalla1.jpg)
 ![pantallapersonajes](/src/Images/pantallapersonajes.jpg)
 ![pantallasorting](/src/Images/pantallasorting.jpg)
 ![pantallacasas](/src/Images/pantallacasas.jpg)
