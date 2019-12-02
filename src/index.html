@@ -19,10 +19,10 @@
           <li class="startItem"><a href="#Start">START</a></li>
           <li class="charactersItem"><a href="#Characters">CHARACTERS</a></li>
           <li class="sortingHatItem"><a href="#SortingHat">SORTING HAT</a> </li>
-          <li class="gryffindorItem"><a href="#Gryffindor" >GRYFFINDOR</a></li>
-          <li class="slytherinItem"><a href="#Slytherin" >SLYTHERIN</a></li>
-          <li class="hufflepuffItem"><a href="#Hufflepuff">HUFFLEPUFF</a></li>
-          <li class="ravenclawItem"><a href="#Ravenclaw">RAVENCLAW</a></li>
+          <li class="gryffindorItem" id="gryffindorPage"><a href="#Gryffindor" >GRYFFINDOR</a></li>
+          <li class="slytherinItem"  id="slytherinPage"><a href="#Slytherin" >SLYTHERIN</a></li>
+          <li class="hufflepuffItem"  id="hufflepuffPage"><a href="#Hufflepuff">HUFFLEPUFF</a></li>
+          <li class="ravenclawItem"  id="ravenclawPage"><a href="#Ravenclaw">RAVENCLAW</a></li>
         </ul>
       </nav>
     </div>
@@ -36,8 +36,8 @@
     <!-- CHARACTERS -->
     <div id='Characters'>
      <img src='http://www.thealmightyguru.com/Wiki/images/b/ba/Harry_Potter_-_Logo.png' alt='Harry Potter Logo' class='logo'>
-     <div id='menuCharacters'>
-       <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
+     <div id='menuCharacters' class="filterMenu">
+       <input type="text" placeholder="Search by name..." class='input' id="nameSearch"> </input> <!--input.placeholder/setAttribute-->
        <div>
          <select name='patronus' id="patronus">
             <option selected value="0">Patronus</option>
@@ -59,7 +59,6 @@
              <option value="1">Unicorn Hair</option>
              <option value="2">Dragon Heartstring</option>
              <option value="3">Phoenix Feather</option>
-             <option value="4">Unknown</option>
            </select>
          </div>
          <div>
@@ -67,7 +66,6 @@
                <option selected value="0">Role</option>
                <option value="1">Hogwarts Student</option>
                <option value="2">Hogwarts Professor</option>
-               <option value="3">Other/Unknown</option>
              </select>
            </div>
      </div>
@@ -77,25 +75,33 @@
    <div id="sortingHat" class="houses">
       <h1>SORTING HAT</h1>
       <p>Pick your Hogwarts house</p>
-      <img class=sortingLogo a href="#Gryffindor" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249">
-      <img class=sortingLogo a href="#Slytherin" src="https://vignette.wikia.nocookie.net/pottermore-blabla/images/a/a3/Blason_Serpentard.png/revision/latest?cb=20121030215201&path-prefix=fr">
-      <img class=sortingLogo a href="#Hufflepuff" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135">
-      <img class=sortingLogo a href="#Ravenclaw" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914"><br>
-      <button id="gryffindorBtn" src="https://i0.wp.com/magiayhechiceria.com/wp-content/uploads/2018/12/gryffindor.png?fit=1080%2C1200&ssl=1">GRYFFINDOR</button>      
-      <button id="slytherinBtn">SLYTHERIN</button>
-      <button id="hufflepuffBtn">HUFFLEPUFF</button>
-      <button id="ravenclawBtn">RAVENCLAW</button>
+      <div class="sortinBtn">
+        <button id="gryffindorBtn">GRYFFINDOR</button>
+        <img class=sortingLogo a href="#Gryffindor" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249">
+      </div>
+      <div class="sortinBtn">
+        <button id="slytherinBtn">SLYTHERIN</button>
+        <img class=sortingLogo a href="#Slytherin" src="https://vignette.wikia.nocookie.net/pottermore-blabla/images/a/a3/Blason_Serpentard.png/revision/latest?cb=20121030215201&path-prefix=fr">
+      </div>
+      <div class="sortinBtn">
+        <button id="hufflepuffBtn">HUFFLEPUFF</button>
+        <img class=sortingLogo a href="#Hufflepuff" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135">
+      </div>
+      <div class="sortinBtn">
+        <button id="ravenclawBtn">RAVENCLAW</button>
+        <img class=sortingLogo a href="#Ravenclaw" src="https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914">
+      </div>
     </div>
     <!--GRYFFINDOR-->
     <div id="Gryffindor" class="Gryffindor">
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/a/a3/Gryffindor_Pottermore.png/revision/latest?cb=20140922195249">
       <h1>GRYFFINDOR</h1>
       <p>Brave, Nerve, Athletic, Courage, Chivalry and Daring</p>
-      <div id='menuCharacters'>
+      <div id='menuCharacters' class="filterMenu">
         <input type="text" name="search" id="name search" placeholder="Search by name..." class="input" list="nameList"> </input> 
           <datalist id="nameList"></datalist>
           <div>
-            <select name='patronus'>
+            <select name='patronus' id="patronusG">
               <option selected value="0">Patronus</option>
               <option value="1">Stag</option>
               <option value="2">Otter</option>
@@ -107,7 +113,7 @@
               <option value="8">Horse</option>
               <option value="9">Wolf</option>
               <option value="10">Weasel</option>
-            </select>
+           </select>
           </div>
           <div>
             <select name="wand">
@@ -134,7 +140,7 @@
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/6/69/Slytherin_Pottermore.png/revision/latest?cb=20141001130915">
       <h1>SLYTHERIN</h1>
       <p>Resourcefulness, Cunning, Ambition, Determination, Leadership and Cleverness</p>
-      <div id='menuCharacters'>
+      <div id='menuCharacters' class="filterMenu">
         <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
         <div>
           <select name='patronus'>
@@ -171,7 +177,7 @@
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/4/42/Hufflepuff_Pottermore.png/revision/latest?cb=20141001131135">
       <h1>HUFFLEPUFF</h1>
       <p>Dedication, Hard working, Fairness, Patience, Kindness, Loyalty and Tolerance</p>
-      <div id='menuCharacters'>
+      <div id='menuCharacters' class="filterMenu">
         <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
         <div>
           <select name='patronus'>
@@ -204,11 +210,11 @@
       </div>
     </div>
     <!--RAVENCLAW-->
-    <div id="Ravenclaw" class="Ravenclaw">
+    <div id="Ravenclaw" class="Ravenclaw" >
       <img src="https://vignette.wikia.nocookie.net/es.harrypotter/images/7/76/Ravenclaw_Pottermore.png/revision/latest?cb=20141001130914">
       <h1>RAVENCLAW</h1>
       <p>Intelligence, Wit, Wisdom, Creativity, Acceptance, Originality and Individuality</p>
-      <div id='menuCharacters'>
+      <div id='menuCharacters' class="filterMenu">
         <input type="text" placeholder="Search by name..." class='input'> </input> <!--input.placeholder/setAttribute-->
         <div>
           <select name='patronus'>

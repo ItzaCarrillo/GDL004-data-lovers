@@ -51,7 +51,7 @@ function patronusFilter(data, input) {
 function wandFilter(data, input) {
   console.log(input)
   return data.filter((persona) => {
-    if (persona.wand === input){
+    if (persona.wand.core === input){
       return persona;
     };
   });
@@ -60,9 +60,19 @@ function wandFilter(data, input) {
 function roleFilter(data, input) {
   console.log(input)
   return data.filter((persona) => {
-    if (persona.role === input){
+    if (input === "hogwarts student" === persona.hogwartsStudent === true){
+      return persona;
+    } else if (input === "hogwarts professor" === persona.hogwartsStaff === true){
+      return persona;
+    } 
+  });
+};
+
+function nameFilter(data, input) {
+  console.log(input)
+  return data.filter((persona) => {
+    if (persona.name === input){
       return persona;
     };
   });
-}
-
+};

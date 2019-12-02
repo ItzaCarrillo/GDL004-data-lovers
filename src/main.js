@@ -9,8 +9,6 @@ export { potterData };
 let fPotter = [];
 
 // Navegacion main menu
-//document.getElementsByClassName('menuSymbol').addEventListener('click', )
-
 function NoneBlock(fromId) {
   const idArray = ['Start', 'Characters', 'sortingHat', 'Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
   for (const id in idArray) {
@@ -74,10 +72,28 @@ ravenclawBtn.addEventListener('click', () => {
   document.getElementById('infoToFilterRavenclaw').innerHTML = `
   ${fPotter.map(potterTemplate).join('')}`;
 });
+gryffindorPage.addEventListener('click', () => {
+  fPotter = filterBy('house', 'Gryffindor');
+  document.getElementById('infoToFilterGryffindor').innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
+slytherinPage.addEventListener('click', () => {
+  fPotter = filterBy('house', 'Slytherin');
+  document.getElementById('infoToFilterSlytherin').innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
+hufflepuffPage.addEventListener('click', () => {
+  fPotter = filterBy('house', 'Hufflepuff');
+  document.getElementById('infoToFilterHufflepuff').innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
+ravenclawPage.addEventListener('click', () => {
+  fPotter = filterBy('house', 'Ravenclaw');
+  document.getElementById('infoToFilterRavenclaw').innerHTML = `
+  ${fPotter.map(potterTemplate).join('')}`;
+});
 
-
-
-// Menú de búsqueda personajes
+// Menú de búsqueda characters
 document.getElementById('patronus').addEventListener('change', selectPatronus);
 function selectPatronus(e) {
   const pcharacter = document.getElementById('patronus');
@@ -102,3 +118,43 @@ function selectRole(e) {
   document.getElementById('potterCards').innerHTML = `${filterRole.map(potterTemplate).join('')}`;
 };
 
+document.getElementById('nameSearch').addEventListener('change', selectName);
+function selectName(e) {
+  const ncharacter = document.getElementById('nameSearch');
+  const role = ncharacter.options[ncharacter.selectedIndex];
+  const filterName = nameFilter(potterData, role) 
+  document.getElementById('potterCards').innerHTML = `${filterName.map(potterTemplate).join('')}`;
+};
+
+// Menú de búsqueda Gryffindor
+document.getElementById('patronusG').addEventListener('change', selectPatronusG);
+function selectPatronusG(e) {
+  const pcharacter = document.getElementById('patronusG');
+  const patronus = pcharacter.options[pcharacter.selectedIndex].text.toLowerCase();
+  const filterPatronus = patronusFilter(potterData, patronus) 
+  document.getElementById('potterCards').innerHTML = `${filterPatronus.map(potterTemplate).join('')}`;
+};
+
+document.getElementById('charactersWand').addEventListener('change', selectWandG);
+function selectWandG(e) {
+  const wcharacter = document.getElementById('charactersWand');
+  const wandCore = wcharacter.options[wcharacter.selectedIndex].text.toLowerCase();
+  const filterWand = wandFilter(potterData, wandCore) 
+  document.getElementById('potterCards').innerHTML = `${filterWand.map(potterTemplate).join('')}`;
+};
+
+document.getElementById('charactersRole').addEventListener('change', selectRoleG);
+function selectRoleG(e) {
+  const rcharacter = document.getElementById('charactersRole');
+  const role = rcharacter.options[rcharacter.selectedIndex].text.toLowerCase();
+  const filterRole = roleFilter(potterData, role) 
+  document.getElementById('potterCards').innerHTML = `${filterRole.map(potterTemplate).join('')}`;
+};
+
+document.getElementById('nameSearch').addEventListener('change', selectNameG);
+function selectNameG(e) {
+  const ncharacter = document.getElementById('nameSearch');
+  const role = ncharacter.options[ncharacter.selectedIndex];
+  const filterName = nameFilter(potterData, role) 
+  document.getElementById('potterCards').innerHTML = `${filterName.map(potterTemplate).join('')}`;
+};
