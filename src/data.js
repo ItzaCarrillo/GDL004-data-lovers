@@ -1,15 +1,25 @@
 import {potterData} from './main.js';
-
-export { filteredCharacters, subFilteredCharacters, filterBy, subFilterBy, potterTemplate };
-
+let simpleFilteredCharacters;
 let filteredCharacters = [];
 let subFilteredCharacters = [];
+let filteredKeys = [];
 //export { }
 
 //console.log(potterData)
-
+function simpleFilterBy(filterKey) {
+  var uniq = {}; // contains all the unique names
+  for(var i=0; i<potterData.length; i++) {
+    var el = potterData[i][filterKey];
+    if(!uniq[el]) uniq[el] = []; // start the array
+    uniq[el].push(potterData[i][filterKey]);
+  }
+  //console.log(uniq)
+  //simpleFilteredCharacters = potterData.filter(movieCharacter => movieCharacter[filterKey]);
+  //console.log(simpleFilteredCharacters)
+  return uniq;
+};
 //Filtrar personajes por casas
-function filterBy(filterKey, filterValue) {
+ function filterBy(filterKey, filterValue) {
   //console.log(filterKey + " and " + filterValue);
   filteredCharacters = potterData.filter(movieCharacter => (movieCharacter[filterKey] === filterValue));
   //console.log(filteredCharacters)
@@ -27,7 +37,7 @@ function subFilterBy(filter1Key, filter1Value, filter2Key, filter2Value) {
 
 //Template tarjetas personaje
 function potterTemplate(cards) {
-  console.log(cards)
+  //console.log(cards)
   return `
   <div class='characterBox'></div>
       <h1>${cards.name}</h1>
@@ -39,4 +49,4 @@ function potterTemplate(cards) {
       <p><strong> Wand:</strong> ${cards.wand.core}</p>`;
 }
 
-//export { filteredCharacters, subFilteredCharacters, filterBy, subFilterBy, potterTemplate };
+export { filteredCharacters, subFilteredCharacters, filterBy, subFilterBy, potterTemplate, simpleFilterBy };

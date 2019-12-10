@@ -110,7 +110,7 @@ export default [
     alive: true,
     image: 'http://hp-api.herokuapp.com/images/mcgonagall.jpg',
   },
-  {
+{
     name: 'Cedric Diggory',
     species: 'human',
     gender: 'male',

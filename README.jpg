@@ -1,8 +1,8 @@
-PROYECTO Data Lovers
-![Harry Potter](https://statics.viralizalo.com/imgentries/c7a3/a0add7b3ef7b16e216834630ffbe2eb323945.jpg?cb=86207)
+Proyecto Data Lovers
+
 WITCHES & WIZARDS
-Es una pagina web para usuarios a los que les gusta la fantasia y la magia de Harry Potter.
-Esta dirigido a usuarios de entre 8 y 17 años de edad principalmente.
+Es una pagina web para usuarios a los que les gusta Harry Potter, esta dirigido
+a usuarios de entre 8 y 17 años de edad a quienes les gusta la fantasia y la magia.
 
 DESCRIPCION DE PROYECTO
 Pagina para poder ver a todos los personajes de la saga de Harry Potter en pantalla,
@@ -16,7 +16,6 @@ cual sirve para mostrar y ocultar el menu de navegacion de la pagina, este menu 
 como iteraciones pagina principal, pagina de todos los personajes de la saga y una pagina
 en la cual el usuario podra elegir a cada una de las casas de Hogwarts, el boton de menu esta
 siempre visible para que el usuario pueda hacer uso de el en cualquier momento.
-El menu muestra la informacion de lo que el usuario elija y esconde todos los de mas elementos.
 En la pagina de personajes esta un select para que el usuario pueda filtrar a todos los
 personajes, por rol, patronus, nombre etc y pueda ver las tarjetas de los personajes
 con los filtros seleccionados.
@@ -30,19 +29,13 @@ HISTORIAS DE USUARIO
 Contamos con un par de histrorias de usuario para poder desarrollar la idea, y maquetar de
 acuerdo a las necesidades de usuarios, se eligio el estilo y colores para asegurarnos que sea acorde
 el gusto de fans de la saga.
-1. historia de usuarios, como usuario quiero un menu de navegacion con todas las opciones de la web
-app, para poder navegar facilmente entre opciones y personalizar la experiencia.
-2. Como usuario quiero un menu que me permita sortear personajes por tipo de varita, casa patronus
-y ocupacion, para saber con cual tengo mas afinidad.
-3. Como usuario quiero poder elegir a mis personajes por casa, saber que personajes comparten casa
-y por casa poder filtrar sus caracteristicas.
-
 
 PRIMER PROTOTIPO
 
 PROTOTIPO FIGMA
-![](https://github.com/Dionisiaca/GDL004-data-lovers/blob/developer/Images/figma.png)
 
+CONCLUSION
+Este proyecto fue realizado de una forma organizada,
 ### Definición del producto
 
 Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
